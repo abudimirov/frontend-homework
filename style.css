@@ -5,10 +5,19 @@ html {
     display: block;
 }
 
-h1 {
+.profile {
+    float: right;
+}
+
+.profile img {
+    width: 5vw;
+}
+
+nav {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 65px;
+    font-size: 24px;
 }
+
