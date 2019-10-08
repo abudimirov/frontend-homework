@@ -5,9 +5,12 @@ const fs = require('fs');
 
 const server = http.createServer(function (request, response){
    console.log(request.method, request.url);
-   if (request.url == '/style.css') {
-      const css = fs.readFileSync('style.css', 'utf8');
+   if (request.url == '/styles/style.css') {
+      const css = fs.readFileSync('styles/style.css', 'utf8');
       response.end(css);
+   } else if (request.url == '/media/tower-logo.svg')  {
+      const logo = fs.readFileSync('media/tower-logo.svg', 'utf8');
+      response.end(logo);
    } else if (request.url == '/profile')  {
       const profile = fs.readFileSync('profile.html', 'utf8');
       response.end(profile);
